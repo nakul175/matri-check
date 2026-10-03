@@ -1,0 +1,48 @@
+{
+  "id": "matri-check",
+  "name": "Matri Check",
+  "organisation": "Janani Care Technologies",
+  "color": "#b22c64",
+  "topic": "Maternal danger-sign assessment",
+  "description": "Record symptoms during pregnancy or after birth and support referral.",
+  "input": "symptoms",
+  "model": "Whisper tiny multilingual",
+  "modelRole": "Speech-to-text for confirmed maternal symptoms; referral prompts are explicit rules, not predictive diagnosis.",
+  "source": "https://github.com/openai/whisper",
+  "fields": [
+    [
+      "bleeding",
+      "Vaginal bleeding reported",
+      "boolean"
+    ],
+    [
+      "convulsions",
+      "Convulsions or loss of consciousness reported",
+      "boolean"
+    ],
+    [
+      "headache",
+      "Severe headache with blurred vision reported",
+      "boolean"
+    ],
+    [
+      "breathing",
+      "Severe breathing difficulty reported",
+      "boolean"
+    ],
+    [
+      "fever",
+      "Fever reported",
+      "boolean"
+    ]
+  ],
+  "sample": {
+    "bleeding": false,
+    "convulsions": false,
+    "headache": true,
+    "breathing": false,
+    "fever": false
+  },
+  "note": "Pregnant woman reports severe headache with blurred vision. No bleeding reported.",
+  "guidance": "https://nhm.gov.in/images/pdf/communitisation/asha/Notes_for_ASHA_Trainers_Part-1_English.pdf"
+}
